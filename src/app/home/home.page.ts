@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiServiceService } from '../services/api-service.service';
+import {PythonShell} from 'python-shell';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +11,13 @@ import { ApiServiceService } from '../services/api-service.service';
 })
 export class HomePage {
   
+  
   constructor() {
-
-    function getUsers(){
-      console.log(getUsers());
-    }
-  }
-
+    let {PythonShell} = require('python-shell')
+    PythonShell.run('src\app\python\Scripts\RestApi(1).py', null, function (result)){
+      console.log('finished', result);
+    }; 
+  };
+  
 
 }
