@@ -13,10 +13,7 @@ export class HomePage {
   
   
   constructor() {
-    let {PythonShell} = require('python-shell')
-    PythonShell.run('src\app\python\Scripts\RestApi(1).py', null, function (result)){
-      console.log('finished', result);
-    }; 
+    
   };
   
 

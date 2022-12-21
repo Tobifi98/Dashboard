@@ -1,0 +1,110 @@
+{
+  "systems": {
+    "cps1": {
+      "errors": ["unknown msm_id "],
+      "avail_state": {
+        "model_id": "avail_state",
+        "instance_id": "cps1",
+        "event_id": "idle_planned",
+        "color_code": "#cdcdcd",
+        "signal_color": "yellow",
+        "label": "idle planned"
+      },
+      "performance": {
+        "model_id": "performance",
+        "instance_id": "cps1",
+        "current": 0.0,
+        "theoretical": 60.0,
+        "min": 0.06,
+        "max": 32.64,
+        "trend": 97,
+        "config": {
+          "label": "Performance",
+          "unit": "pk/h",
+          "fradi": 0.0,
+          "minmax_range": [0.0, 72.0],
+          "target_range": [50.0, 60.0]
+        }
+      },
+      "yield": {
+        "model_id": "yield_pct",
+        "instance_id": "cps1",
+        "current": 100.0,
+        "config": {
+          "label": "Yield",
+          "unit": "%",
+          "fradi": 1.0,
+          "minmax_range": [0.0, 100.0],
+          "target_range": [80, 100]
+        }
+      },
+      "scrap": {
+        "model_id": "scrap_pk",
+        "instance_id": "cps1",
+        "current": 0.0,
+        "config": {
+          "type": "progress",
+          "color": "red",
+          "label": "Scrap",
+          "unit": "pk",
+          "fradi": 0.0,
+          "target": 0.4
+        },
+        "progress_pct": 0.0
+      },
+      "good_prod": {
+        "model_id": "good_prod_pk",
+        "instance_id": "cps1",
+        "current": 5.0,
+        "config": {
+          "type": "progress",
+          "label": "Good Prod",
+          "unit": "pk",
+          "fradi": 0.0,
+          "target": 2.0
+        },
+        "progress_pct": 250.0
+      },
+      "oee": {
+        "model_id": "oee",
+        "instance_id": "cps1",
+        "current": 0.0,
+        "avail": 1.0,
+        "performance": 1.0,
+        "yield": 0.0,
+        "oee": 0.0,
+        "config": {
+          "label": "OEE",
+          "unit": "%",
+          "fradi": 1.0,
+          "minmax_range": [0.0, 100.0],
+          "target_range": [80.0, 100.0]
+        },
+        "daterange": ["2022-12-21 00:00:00.000", "2022-12-21 12:43:53.058"]
+      },
+      "current_op": {
+        "success": true,
+        "operation": {
+          "system_id": "cps1",
+          "prod_order_id": "po_3809_2",
+          "pos_id": 1,
+          "target_prod_dur": 60000,
+          "target_setup_dur": 120000,
+          "target_prod_dur_total": 120000.0,
+          "target_dur": 240000.0,
+          "target_start_dt": "2022-12-16 10:14:00.000",
+          "target_end_dt": "2022-12-16 10:18:00.000",
+          "target_qty_min": 1.0,
+          "good_prod_qty": 5.0,
+          "scrap_qty": 0.0,
+          "open_qty": 0.0,
+          "start_date": "2022-12-16 10:09:54.149",
+          "predicted_end_dt": "2022-12-19 10:43:53.066",
+          "predicted_dur": 261238342
+        }
+      }
+    },
+    "s0": { "errors": ["Unknown system s0"] },
+    "": { "errors": ["Unknown system "] }
+  }
+}
