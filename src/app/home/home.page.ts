@@ -11,11 +11,11 @@ import { ApiServiceService } from '../services/api-service.service';
 export class HomePage {
   
   constructor() {
+
+    function getUsers(){
+      console.log(getUsers());
+    }
   }
-  
-  testFuction(){
-    let text = ApiServiceService.
-    console.log(text)
-  }
+
 
 }
