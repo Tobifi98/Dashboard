@@ -1,7 +1,5 @@
 import requests
 
- 
-
 url = "http://10.3.0.71:8080/mhubx-cc/module/juwi/action?"
 parameters = {
     "page":"Logic.Interface",
@@ -10,9 +8,6 @@ parameters = {
     "system_id":"*",
     "msm_id":"*"
 }
-
- 
-
 
 r = requests.get(url, params=parameters, auth=('tester', 'training'))
 print(r)
