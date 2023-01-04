@@ -29,10 +29,5 @@ export class HomePage {
         console.error(error);
       }
     }
-    
   };
-
-
-  
-
 }
