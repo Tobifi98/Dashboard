@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HelloWorldComponent } from '../test/hello-world/hello-world.component';
 import { LineChartComponent } from '../line-chart/line-chart.component';
+import { DoughnutChartComponentComponent } from '../doughnut-chart-component/doughnut-chart-component.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { LineChartComponent } from '../line-chart/line-chart.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, HelloWorldComponent, LineChartComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
+  declarations: [HomePage, HelloWorldComponent, LineChartComponent, DoughnutChartComponentComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
 })
 export class HomePageModule {}
