@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HelloWorldComponent } from '../test/hello-world/hello-world.component';
+import { LineChartComponent } from '../line-chart/line-chart.component';
 
 
 @NgModule({
@@ -15,6 +16,6 @@ import { HelloWorldComponent } from '../test/hello-world/hello-world.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, HelloWorldComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
+  declarations: [HomePage, HelloWorldComponent, LineChartComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
 })
 export class HomePageModule {}
