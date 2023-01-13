@@ -8,9 +8,9 @@ import { Chart } from "chart.js";
 })
 export class DoughnutChartComponentComponent implements OnInit {
 
-  @ViewChild("doughnutCanvas") doughnutCanvas: ElementRef | undefined;
+  @ViewChild("doughnutCanvas") doughnutCanvas: ElementRef;
 
-  private doughnutChart: Chart | undefined;
+  private doughnutChart: Chart;
 
   constructor() { }
 
@@ -40,4 +40,4 @@ export class DoughnutChartComponentComponent implements OnInit {
   }
   }
 
-}
+
