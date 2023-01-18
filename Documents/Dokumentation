@@ -40,6 +40,28 @@ RETVAL avail_state
             }
         }
 }
+
+RETVAL good_prod
+{
+    "systems": {
+        "cps1": {
+            "errors": [],
+            "good_prod": {
+                "model_id": "good_prod_pk",
+                "instance_id": "cps1",
+                "current": 0.0,
+                "config": {
+                    "type": "progress",
+                    "label": "Good Prod",
+                    "unit": "pk",
+                    "fradi": 0.0,
+                    "target": 99.0
+                },
+                "progress_pct": 0.0
+            }
+        }
+    }
+}
                      
 
 POST Aufbau:
@@ -54,6 +76,19 @@ BODY:
             }
         }
 
+POST Alarms
+URL: 
+        url:  http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=postAlarm
+BODY:
+    {
+            "source": {
+            "id":"{{system}};{{main_module}}" },
+        "type":"module",
+        "severity":"error",
+        "code": "100",
+        "text": "No Material"            
+    }
+    
 GET Aufbau:
 URL:
         url : http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=getMeasurment
@@ -75,4 +110,11 @@ RETVAL:
         "value": 83.32
         "unit": "pct"
     }
+
+GET Arlarm Aufbau:
+    URL:
+        url : http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=getAlarms&system_id={system}
+
+
+
 
