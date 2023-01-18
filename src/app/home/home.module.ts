@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { HelloWorldComponent } from '../test/hello-world/hello-world.component';
 import { LineChartComponent } from '../line-chart/line-chart.component';
 import { DoughnutChartComponentComponent } from '../doughnut-chart-component/doughnut-chart-component.component';
+import { NgChartsModule } from "ng2-charts";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DoughnutChartComponentComponent } from '../doughnut-chart-component/dou
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    NgChartsModule
   ],
   declarations: [HomePage, HelloWorldComponent, LineChartComponent, DoughnutChartComponentComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
 })
