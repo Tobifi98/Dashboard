@@ -6,22 +6,71 @@ import { Chart } from "chart.js";
   templateUrl: './doughnut-chart-component.component.html',
   styleUrls: ['./doughnut-chart-component.component.scss'],
 })
-
 export class DoughnutChartComponentComponent implements OnInit {
 
   @ViewChild("doughnutCanvas") doughnutCanvas: ElementRef;
+
+  public technologies              : any = {
+    "technologies" : [
+      {
+         'technology' : 'Mobile: Ionic/Angular',
+         'time'       : 50,
+      },
+      {
+         'technology' : 'Front-end: Sass/CSS',
+         'time'       : 15,
+         'color'      : 'rgba(83, 131, 185, 0.5)',
+         'hover'      : 'rgba(122, 160, 202, 0.5)'
+      },
+      {
+         'technology' : 'Server: PHP/MySQL',
+         'time'       : 10,
+         'color'      : 'rgba(198, 147, 194, 0.5)',
+         'hover'      : 'rgba(200, 166, 197, 0.5)'
+      },
+      {
+         'technology' : 'Code Documentation',
+         'time'       : 5,
+         'color'      : 'rgba(54, 116, 152, 0.5)',
+         'hover'      : 'rgba(103, 139, 160, 0.5)'
+      },
+      {
+         'technology' : 'Knowledge: Blogging',
+         'time'       : 10,
+         'color'      : 'rgba(152, 54, 145, 0.5)',
+         'hover'      : 'rgba(152, 89, 149, 0.5)',
+      },
+      {
+         'technology' : 'SEO/Online Marketing',
+         'time'       : 10,
+         'color'      : 'rgba(192, 192, 192, 0.5)',
+         'hover'      : 'rgba(220, 220, 220, 0.5)'
+      }
+   ]
+};
 
   private doughnutChart: any;
   public chartLabels               : any    = [];
   public chartValues               : any    = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 
   constructor() {
+
   }
 
-  defineChartData() {
-  }
+  defineChartData()
+   {
+      let k : any;
 
-  ngOnInit() {
+      for(k in this.technologies.technologies)
+      {
+         var tech  =      this.technologies.technologies[k];
+
+         this.chartLabels.push(tech.technology);
+         this.chartValues.push(tech.time);
+      }
+   }
+
+   ngOnInit() {
 
     this.defineChartData();
 
@@ -46,4 +95,3 @@ export class DoughnutChartComponentComponent implements OnInit {
     });
   }
 }
-
