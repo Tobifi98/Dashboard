@@ -82,13 +82,13 @@ URL:
 BODY:
     {
             "source": {
-            "id":"{{system}};{{main_module}}" },
+            "id":"cps1;PR{module}" },
         "type":"module",
         "severity":"error",
         "code": "100",
         "text": "No Material"            
     }
-    
+
 GET Aufbau:
 URL:
         url : http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=getMeasurment
