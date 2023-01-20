@@ -1,9 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ChartDataset } from "chart.js";
-import { Label } from 'ng2-charts';
-
 
 
 @Component({
@@ -13,11 +10,6 @@ import { Label } from 'ng2-charts';
 })
 export class HomePage {
   
-  chartData: ChartDataset[] = [
-    { data: [1,5,6,1,32,8,14], label: 'Test data'}
-  ];
-
-  chartLabels: Label[];
-
+  
   constructor() {}
 }
