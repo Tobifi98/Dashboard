@@ -1,23 +1,23 @@
-import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import { Chart } from "chart.js";
+import { Component, OnInit } from '@angular/core';
+import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-doughnut-chart-component',
-  templateUrl: './doughnut-chart-component.component.html',
-  styleUrls: ['./doughnut-chart-component.component.scss'],
+  selector: 'app-bar-chart',
+  templateUrl: './bar-chart.component.html',
+  styleUrls: ['./bar-chart.component.scss'],
 })
-export class DoughnutChartComponentComponent implements OnInit {
+export class BarChartComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-    var myChart = new Chart('doughnutChart', {
-      type: 'doughnut',
+    var myChart = new Chart('barChart', {
+      type: 'bar',
       data: {
         labels: ['test1', 'test2', 'test3'],
         datasets: [
           {
-            label: 'testlabel',
+            label: 'Überschrift',
             data: [12, 19, 3],
             backgroundColor: [
               'rgba(255,99,132,0.2)',
@@ -35,13 +35,12 @@ export class DoughnutChartComponentComponent implements OnInit {
       },
       options:{
         onResize(chart, size) {
-        
+          
         },
         responsive: true,
         maintainAspectRatio: false,
       }
     });
   }
-  }
 
-
+}
