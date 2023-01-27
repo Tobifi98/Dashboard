@@ -30,13 +30,16 @@ export class HelloWorldComponent {
     return this.http.get('http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=getMeasurement&source=system&system_id=*&msm_id=*', { headers, responseType: 'json'});
   }*/
 
-  ngOnInit() {
+  /*ngOnInit() {
     const headers = new HttpHeaders({
-      Authorization: 'Basic ' + btoa('tester:training')
+      Authorization: 'Basic ' + btoa('tester:training'),
+      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+      Referer: 'unsafe-url',
     });
-    this.http.get<any>('http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=getMeasurement&source=system&system_id=cps1&msm_id=good_prod;scrap', { headers }).subscribe(data => {
-        this.test = data.total;
-        console.log(this.test);
+    this.http.get<any>('http://10.3.0.71:8080/mhubx-cc/module/juwi/action?page=Logic.Interface&name=getMeasurement&source=system&system_id=cps1&msm_id=good_prod', { headers }).subscribe(data => {
+        console.log(data);
     })        
-}
+}*/
 }
