@@ -16,13 +16,23 @@ import { MqttComponent } from '../mqtt/mqtt/mqtt.component';
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule,
-    NgChartsModule
-  ],
-  declarations: [HomePage, HelloWorldComponent, LineChartComponent, DoughnutChartComponentComponent, BarChartComponent, MqttComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
+    declarations: [
+      HomePage, 
+      HelloWorldComponent, 
+      LineChartComponent, 
+      DoughnutChartComponentComponent, 
+      BarChartComponent, 
+      MqttComponent, 
+      ApiCallComponent, 
+      AppComponent
+    ] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
+    ,
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule,
+        NgChartsModule
+    ]
 })
 export class HomePageModule {}
