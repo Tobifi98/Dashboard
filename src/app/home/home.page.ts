@@ -9,11 +9,7 @@ import { LineChartComponent } from '../line-chart/line-chart.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-
-export class HomePage implements OnInit{
-  
-  constructor() {}
-  ngOnInit(){
-  }
-  
+export class HomePage {
+  constructor() {
+  };
 }

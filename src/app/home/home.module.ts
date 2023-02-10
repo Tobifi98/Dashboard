@@ -10,6 +10,9 @@ import { LineChartComponent } from '../line-chart/line-chart.component';
 import { DoughnutChartComponentComponent } from '../doughnut-chart-component/doughnut-chart-component.component';
 import { NgChartsModule } from "ng2-charts";
 import { BarChartComponent } from '../bar-chart/bar-chart.component';
+import { AppComponent } from '../app.component';
+import { ApiCallComponent } from '../api-call/api-call.component';
+import { MqttComponent } from '../mqtt/mqtt/mqtt.component';
 
 
 @NgModule({
@@ -20,6 +23,6 @@ import { BarChartComponent } from '../bar-chart/bar-chart.component';
     HomePageRoutingModule,
     NgChartsModule
   ],
-  declarations: [HomePage, HelloWorldComponent, LineChartComponent, DoughnutChartComponentComponent, BarChartComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
+  declarations: [HomePage, HelloWorldComponent, LineChartComponent, DoughnutChartComponentComponent, BarChartComponent, MqttComponent] //you need to import your component here to create a new component cou have to type "ionic g c" into the command line
 })
 export class HomePageModule {}
