@@ -34,6 +34,7 @@
     "@ionic/angular": "^6.1.9",
     "ionicons": "^6.0.3",
     "mqtt": "^4.3.7",
+    "ngx-mqtt": "^9.0.5",
     "python-shell": "^3.0.1",
     "rxjs": "~7.5.0",
     "stream-browserify": "^3.0.0",
